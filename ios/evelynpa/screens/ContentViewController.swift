@@ -14,11 +14,31 @@ class ContentViewController: UIViewController, ContentWithExternalNavigator, UIC
     var openCellDelegate: OpenCellDelegate? = nil
     var albumContent: [Content?] = [Content?]()
     var externalNavigationProtocol: ExternalNavigationProtocol? = nil
+    private lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        refreshControl.tintColor = UIColor(rgb: 0x4b052e)
+        return refreshControl
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        if #available(iOS 10.0, *) {
+            collectionView.refreshControl = refreshControl
+        } else {
+            collectionView.addSubview(refreshControl)
+        }
+    }
+    
+    @objc func refresh(_ sender: UIRefreshControl) {
+        externalNavigationProtocol?.onRefresh()
+    }
+    
+    func onRefreshEnd() {
+        self.refreshControl.endRefreshing()
     }
     
     func setDataToView(data: Content) {

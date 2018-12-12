@@ -11,4 +11,5 @@ import UIKit
 protocol ExternalNavigatorObserver {
     var externalNavigationProtocol: ExternalNavigationProtocol? {get}
     func setSender(sender: ExternalNavigationProtocol)
+    func onRefreshEnd()
 }

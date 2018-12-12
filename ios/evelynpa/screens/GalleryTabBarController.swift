@@ -37,6 +37,7 @@ class GalleryTabBarController: UITabBarController, ApolloContentDelegate, OpenCe
         if let controllers = viewControllers, let data = content {
             for case let viewDelegate as ContentWithExternalNavigator in controllers {
                 viewDelegate.setDataToView(data: data)
+                viewDelegate.onRefreshEnd()
             }
         }
     }
@@ -58,6 +59,10 @@ class GalleryTabBarController: UITabBarController, ApolloContentDelegate, OpenCe
         popReference()
         return false
     }
+
+    func onRefresh() {
+        triggerLoad(true)
+    }
     
     private func pushReference(ref: String) {
         currentReference.append(ref)
@@ -68,10 +73,13 @@ class GalleryTabBarController: UITabBarController, ApolloContentDelegate, OpenCe
         let prevReference = currentReference.popLast()
         print("Pop \(prevReference as String?)")
         triggerLoad()
-        
     }
     
-    private func triggerLoad() {
-        self.contentFetcher?.loadContent(ref: currentReference[currentReference.count - 1])
+    private func triggerLoad(_ isRefresh: Bool? = false) {
+        guard isRefresh == true else {
+            self.contentFetcher?.loadContent(ref: currentReference[currentReference.count - 1])
+            return
+        }
+        self.contentFetcher?.loadContent(ref: currentReference[currentReference.count - 1], cachePolicy: .fetchIgnoringCacheData)
     }
 }

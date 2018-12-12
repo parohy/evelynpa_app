@@ -10,6 +10,7 @@
 import Foundation
 import Apollo
 
+//TODO: Add background fetch
 class ContentFetcher {
     var apollo: ApolloClient
     var apolloDataDelegate: ApolloContentDelegate? = nil
@@ -25,15 +26,9 @@ class ContentFetcher {
      - parameter isCol: True if you want to fetch collections
      - parameter delegate: ApolloContentDelegate
      */
-    func loadContent(ref: String, isCol: Bool? = nil) {
-        apollo.fetch(query: ContentQuery(ref: ref, isCol: isCol)) { result, err in
-            var resultContent: Content? = nil
-            if let err = err {
-                print("ERROR: \(err)")
-            } else {
-                resultContent = self.createResultContent(queryData: result?.data)
-            }
-            
+    func loadContent(ref: String, isCol: Bool? = nil, cachePolicy: CachePolicy = .returnCacheDataElseFetch) {
+        apollo.fetch(query: ContentQuery(ref: ref, isCol: isCol), cachePolicy: cachePolicy) { result, err in
+            let resultContent = self.createResultContent(queryData: result?.data)
             self.apolloDataDelegate?.setData(content: resultContent)
         }
     }

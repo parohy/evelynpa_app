@@ -10,4 +10,5 @@ import UIKit
 
 protocol ExternalNavigationProtocol {
     func back() -> Bool
+    func onRefresh()
 }

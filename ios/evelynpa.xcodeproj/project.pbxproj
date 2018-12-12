@@ -11,6 +11,10 @@
 		5A5C341A21C133C200B21F79 /* ExternalNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C341921C133C200B21F79 /* ExternalNavigationProtocol.swift */; };
 		5A5C341C21C1359A00B21F79 /* ExternalNavigatorObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C341B21C1359A00B21F79 /* ExternalNavigatorObserver.swift */; };
 		5A5C341E21C136A500B21F79 /* ContentWithExternalNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C341D21C136A500B21F79 /* ContentWithExternalNavigator.swift */; };
+		5A5C342221C1524300B21F79 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C342121C1524300B21F79 /* UIColorExtension.swift */; };
+		5A5C342421C1534A00B21F79 /* ExternalNavigatorObserverExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C342321C1534A00B21F79 /* ExternalNavigatorObserverExtension.swift */; };
+		5A5C342621C1538F00B21F79 /* ExternalNavigationProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C342521C1538F00B21F79 /* ExternalNavigationProtocolExtension.swift */; };
+		5A5C342921C15F7800B21F79 /* SegueFromRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C342821C15F7800B21F79 /* SegueFromRight.swift */; };
 		5A93ECC421BFCDBC00D4B36C /* AlbumUICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93ECC321BFCDBC00D4B36C /* AlbumUICell.swift */; };
 		5A93ECC821BFD2C800D4B36C /* OpenCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93ECC721BFD2C800D4B36C /* OpenCellDelegate.swift */; };
 		5A93ECCC21BFD8A500D4B36C /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93ECCB21BFD8A500D4B36C /* AlbumViewController.swift */; };
@@ -37,6 +41,10 @@
 		5A5C341921C133C200B21F79 /* ExternalNavigationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalNavigationProtocol.swift; sourceTree = "<group>"; };
 		5A5C341B21C1359A00B21F79 /* ExternalNavigatorObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalNavigatorObserver.swift; sourceTree = "<group>"; };
 		5A5C341D21C136A500B21F79 /* ContentWithExternalNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentWithExternalNavigator.swift; sourceTree = "<group>"; };
+		5A5C342121C1524300B21F79 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		5A5C342321C1534A00B21F79 /* ExternalNavigatorObserverExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalNavigatorObserverExtension.swift; sourceTree = "<group>"; };
+		5A5C342521C1538F00B21F79 /* ExternalNavigationProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalNavigationProtocolExtension.swift; sourceTree = "<group>"; };
+		5A5C342821C15F7800B21F79 /* SegueFromRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromRight.swift; sourceTree = "<group>"; };
 		5A93ECC321BFCDBC00D4B36C /* AlbumUICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumUICell.swift; sourceTree = "<group>"; };
 		5A93ECC721BFD2C800D4B36C /* OpenCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCellDelegate.swift; sourceTree = "<group>"; };
 		5A93ECCB21BFD8A500D4B36C /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
@@ -84,8 +92,19 @@
 		5A5C341221C0FBEA00B21F79 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5A5C342121C1524300B21F79 /* UIColorExtension.swift */,
+				5A5C342321C1534A00B21F79 /* ExternalNavigatorObserverExtension.swift */,
+				5A5C342521C1538F00B21F79 /* ExternalNavigationProtocolExtension.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		5A5C342721C15F6400B21F79 /* animations */ = {
+			isa = PBXGroup;
+			children = (
+				5A5C342821C15F7800B21F79 /* SegueFromRight.swift */,
+			);
+			path = animations;
 			sourceTree = "<group>";
 		};
 		5A93ECF521C004EB00D4B36C /* protocols */ = {
@@ -122,6 +141,7 @@
 		5AB4776521BE814F00F9B519 /* evelynpa */ = {
 			isa = PBXGroup;
 			children = (
+				5A5C342721C15F6400B21F79 /* animations */,
 				5A5C341221C0FBEA00B21F79 /* extensions */,
 				5A93ECF521C004EB00D4B36C /* protocols */,
 				5AE21A5B21BEB988008D2CF1 /* screens */,
@@ -320,15 +340,19 @@
 			files = (
 				5A5C341C21C1359A00B21F79 /* ExternalNavigatorObserver.swift in Sources */,
 				5A93ECC821BFD2C800D4B36C /* OpenCellDelegate.swift in Sources */,
+				5A5C342621C1538F00B21F79 /* ExternalNavigationProtocolExtension.swift in Sources */,
 				5AB4778121BEA1EC00F9B519 /* ContentFetcher.swift in Sources */,
+				5A5C342921C15F7800B21F79 /* SegueFromRight.swift in Sources */,
 				5A5C341E21C136A500B21F79 /* ContentWithExternalNavigator.swift in Sources */,
 				5AB4777C21BEA00E00F9B519 /* API.swift in Sources */,
+				5A5C342221C1524300B21F79 /* UIColorExtension.swift in Sources */,
 				5A93ECD221BFE42700D4B36C /* ContentViewController.swift in Sources */,
 				5A93ECCC21BFD8A500D4B36C /* AlbumViewController.swift in Sources */,
 				5AE21A5F21BEBE1B008D2CF1 /* AboutViewController.swift in Sources */,
 				5A5C341A21C133C200B21F79 /* ExternalNavigationProtocol.swift in Sources */,
 				5A93ECFB21C0078400D4B36C /* ApolloContentDelegate.swift in Sources */,
 				5A5C341621C1091600B21F79 /* ContentDataProtocol.swift in Sources */,
+				5A5C342421C1534A00B21F79 /* ExternalNavigatorObserverExtension.swift in Sources */,
 				5A93ECC421BFCDBC00D4B36C /* AlbumUICell.swift in Sources */,
 				5AB4776721BE814F00F9B519 /* AppDelegate.swift in Sources */,
 				5A93ECD021BFE2F900D4B36C /* ContenUICell.swift in Sources */,

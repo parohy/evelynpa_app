@@ -16,11 +16,23 @@ class AlbumViewController: UIViewController, ContentWithExternalNavigator, UICol
     var albumContent: [Content?] = [Content?]()
     var openCellDelegate: OpenCellDelegate? = nil
     var externalNavigationProtocol: ExternalNavigationProtocol? = nil
+    private lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        refreshControl.tintColor = UIColor(rgb: 0x4b052e)
+        return refreshControl
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        if #available(iOS 10.0, *) {
+            collectionView.refreshControl = refreshControl
+        } else {
+            collectionView.addSubview(refreshControl)
+        }
     }
     
     func setOpenCellDelegate(openCellDelegate: OpenCellDelegate) {
@@ -29,6 +41,10 @@ class AlbumViewController: UIViewController, ContentWithExternalNavigator, UICol
     
     func setSender(sender: ExternalNavigationProtocol) {
         self.externalNavigationProtocol = sender
+    }
+    
+    func onRefreshEnd() {
+        self.refreshControl.endRefreshing()
     }
     
     func setDataToView(data: Content) {
@@ -48,6 +64,10 @@ class AlbumViewController: UIViewController, ContentWithExternalNavigator, UICol
             self.performSegue(withIdentifier: "unwindFromScreen", sender: self)
             return
         }
+    }
+    
+    @objc func refresh(_ sender: UIRefreshControl) {
+        self.externalNavigationProtocol?.onRefresh()
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
