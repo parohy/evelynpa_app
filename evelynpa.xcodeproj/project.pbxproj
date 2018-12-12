@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A5C341621C1091600B21F79 /* ContentDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C341521C1091600B21F79 /* ContentDataProtocol.swift */; };
+		5A5C341A21C133C200B21F79 /* ExternalNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C341921C133C200B21F79 /* ExternalNavigationProtocol.swift */; };
+		5A5C341C21C1359A00B21F79 /* ExternalNavigatorObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C341B21C1359A00B21F79 /* ExternalNavigatorObserver.swift */; };
+		5A5C341E21C136A500B21F79 /* ContentWithExternalNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C341D21C136A500B21F79 /* ContentWithExternalNavigator.swift */; };
 		5A93ECC421BFCDBC00D4B36C /* AlbumUICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93ECC321BFCDBC00D4B36C /* AlbumUICell.swift */; };
 		5A93ECC821BFD2C800D4B36C /* OpenCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93ECC721BFD2C800D4B36C /* OpenCellDelegate.swift */; };
 		5A93ECCC21BFD8A500D4B36C /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93ECCB21BFD8A500D4B36C /* AlbumViewController.swift */; };
-		5A93ECD021BFE2F900D4B36C /* ContentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93ECCF21BFE2F900D4B36C /* ContentViewCell.swift */; };
+		5A93ECD021BFE2F900D4B36C /* ContenUICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93ECCF21BFE2F900D4B36C /* ContenUICell.swift */; };
 		5A93ECD221BFE42700D4B36C /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93ECD121BFE42700D4B36C /* ContentViewController.swift */; };
 		5A93ECD821BFE5FF00D4B36C /* GalleryTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93ECD721BFE5FF00D4B36C /* GalleryTabBarController.swift */; };
 		5A93ECFB21C0078400D4B36C /* ApolloContentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93ECFA21C0078400D4B36C /* ApolloContentDelegate.swift */; };
@@ -21,7 +25,7 @@
 		5AB4777A21BE9E3D00F9B519 /* Content.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 5AB4777921BE9E3D00F9B519 /* Content.graphql */; };
 		5AB4777C21BEA00E00F9B519 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4777B21BEA00E00F9B519 /* API.swift */; };
 		5AB4777F21BEA16700F9B519 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4777E21BEA16700F9B519 /* Content.swift */; };
-		5AB4778121BEA1EC00F9B519 /* ContentFetcherImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4778021BEA1EC00F9B519 /* ContentFetcherImpl.swift */; };
+		5AB4778121BEA1EC00F9B519 /* ContentFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4778021BEA1EC00F9B519 /* ContentFetcher.swift */; };
 		5AE21A5D21BEBB03008D2CF1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE21A5C21BEBB03008D2CF1 /* HomeViewController.swift */; };
 		5AE21A5F21BEBE1B008D2CF1 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE21A5E21BEBE1B008D2CF1 /* AboutViewController.swift */; };
 		8B05F82E4657E879F20C7375 /* Pods_evelynpa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B336E86DFE90897BD9944CF5 /* Pods_evelynpa.framework */; };
@@ -29,10 +33,14 @@
 
 /* Begin PBXFileReference section */
 		04A5958608D5CB57C4380F77 /* Pods-evelynpa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evelynpa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-evelynpa/Pods-evelynpa.debug.xcconfig"; sourceTree = "<group>"; };
+		5A5C341521C1091600B21F79 /* ContentDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDataProtocol.swift; sourceTree = "<group>"; };
+		5A5C341921C133C200B21F79 /* ExternalNavigationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalNavigationProtocol.swift; sourceTree = "<group>"; };
+		5A5C341B21C1359A00B21F79 /* ExternalNavigatorObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalNavigatorObserver.swift; sourceTree = "<group>"; };
+		5A5C341D21C136A500B21F79 /* ContentWithExternalNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentWithExternalNavigator.swift; sourceTree = "<group>"; };
 		5A93ECC321BFCDBC00D4B36C /* AlbumUICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumUICell.swift; sourceTree = "<group>"; };
 		5A93ECC721BFD2C800D4B36C /* OpenCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCellDelegate.swift; sourceTree = "<group>"; };
 		5A93ECCB21BFD8A500D4B36C /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
-		5A93ECCF21BFE2F900D4B36C /* ContentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewCell.swift; sourceTree = "<group>"; };
+		5A93ECCF21BFE2F900D4B36C /* ContenUICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContenUICell.swift; sourceTree = "<group>"; };
 		5A93ECD121BFE42700D4B36C /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		5A93ECD721BFE5FF00D4B36C /* GalleryTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryTabBarController.swift; sourceTree = "<group>"; };
 		5A93ECFA21C0078400D4B36C /* ApolloContentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloContentDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +53,7 @@
 		5AB4777921BE9E3D00F9B519 /* Content.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Content.graphql; sourceTree = "<group>"; };
 		5AB4777B21BEA00E00F9B519 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		5AB4777E21BEA16700F9B519 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
-		5AB4778021BEA1EC00F9B519 /* ContentFetcherImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentFetcherImpl.swift; sourceTree = "<group>"; };
+		5AB4778021BEA1EC00F9B519 /* ContentFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentFetcher.swift; sourceTree = "<group>"; };
 		5AE21A5C21BEBB03008D2CF1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5AE21A5E21BEBE1B008D2CF1 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		70009E9768C2D3140ACD90EF /* Pods-evelynpa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evelynpa.release.xcconfig"; path = "Pods/Target Support Files/Pods-evelynpa/Pods-evelynpa.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +93,10 @@
 			children = (
 				5A93ECC721BFD2C800D4B36C /* OpenCellDelegate.swift */,
 				5A93ECFA21C0078400D4B36C /* ApolloContentDelegate.swift */,
+				5A5C341521C1091600B21F79 /* ContentDataProtocol.swift */,
+				5A5C341921C133C200B21F79 /* ExternalNavigationProtocol.swift */,
+				5A5C341B21C1359A00B21F79 /* ExternalNavigatorObserver.swift */,
+				5A5C341D21C136A500B21F79 /* ContentWithExternalNavigator.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -121,7 +133,7 @@
 				5AB4776D21BE815100F9B519 /* Assets.xcassets */,
 				5AB4776F21BE815100F9B519 /* LaunchScreen.storyboard */,
 				5AB4777221BE815100F9B519 /* Info.plist */,
-				5AB4778021BEA1EC00F9B519 /* ContentFetcherImpl.swift */,
+				5AB4778021BEA1EC00F9B519 /* ContentFetcher.swift */,
 			);
 			path = evelynpa;
 			sourceTree = "<group>";
@@ -139,7 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				5A93ECC321BFCDBC00D4B36C /* AlbumUICell.swift */,
-				5A93ECCF21BFE2F900D4B36C /* ContentViewCell.swift */,
+				5A93ECCF21BFE2F900D4B36C /* ContenUICell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -306,16 +318,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A5C341C21C1359A00B21F79 /* ExternalNavigatorObserver.swift in Sources */,
 				5A93ECC821BFD2C800D4B36C /* OpenCellDelegate.swift in Sources */,
-				5AB4778121BEA1EC00F9B519 /* ContentFetcherImpl.swift in Sources */,
+				5AB4778121BEA1EC00F9B519 /* ContentFetcher.swift in Sources */,
+				5A5C341E21C136A500B21F79 /* ContentWithExternalNavigator.swift in Sources */,
 				5AB4777C21BEA00E00F9B519 /* API.swift in Sources */,
 				5A93ECD221BFE42700D4B36C /* ContentViewController.swift in Sources */,
 				5A93ECCC21BFD8A500D4B36C /* AlbumViewController.swift in Sources */,
 				5AE21A5F21BEBE1B008D2CF1 /* AboutViewController.swift in Sources */,
+				5A5C341A21C133C200B21F79 /* ExternalNavigationProtocol.swift in Sources */,
 				5A93ECFB21C0078400D4B36C /* ApolloContentDelegate.swift in Sources */,
+				5A5C341621C1091600B21F79 /* ContentDataProtocol.swift in Sources */,
 				5A93ECC421BFCDBC00D4B36C /* AlbumUICell.swift in Sources */,
 				5AB4776721BE814F00F9B519 /* AppDelegate.swift in Sources */,
-				5A93ECD021BFE2F900D4B36C /* ContentViewCell.swift in Sources */,
+				5A93ECD021BFE2F900D4B36C /* ContenUICell.swift in Sources */,
 				5AB4777F21BEA16700F9B519 /* Content.swift in Sources */,
 				5AE21A5D21BEBB03008D2CF1 /* HomeViewController.swift in Sources */,
 				5A93ECD821BFE5FF00D4B36C /* GalleryTabBarController.swift in Sources */,

@@ -4,7 +4,7 @@ import Apollo
 
 public final class ContentQuery: GraphQLQuery {
   public let operationDefinition =
-    "query Content($ref: String!, $isCol: Boolean) {\n  content(ref: $ref) {\n    __typename\n    ...MediaFragment\n    children(isCol: $isCol) {\n      __typename\n      thumbnail {\n        __typename\n        url\n      }\n      ...MediaFragment\n    }\n  }\n}"
+    "query Content($ref: String!, $isCol: Boolean) {\n  content(ref: $ref) {\n    __typename\n    ...MediaFragment\n    children(isCol: $isCol) {\n      __typename\n      thumbnail {\n        __typename\n        url\n      }\n      isCol\n      ...MediaFragment\n    }\n  }\n}"
 
   public var queryDocument: String { return operationDefinition.appending(MediaFragment.fragmentDefinition) }
 
@@ -175,6 +175,7 @@ public final class ContentQuery: GraphQLQuery {
         public static let selections: [GraphQLSelection] = [
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
           GraphQLField("thumbnail", type: .object(Thumbnail.selections)),
+          GraphQLField("isCol", type: .nonNull(.scalar(Bool.self))),
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
           GraphQLField("_id", type: .nonNull(.scalar(GraphQLID.self))),
           GraphQLField("title", type: .scalar(String.self)),
@@ -190,8 +191,8 @@ public final class ContentQuery: GraphQLQuery {
           self.resultMap = unsafeResultMap
         }
 
-        public init(thumbnail: Thumbnail? = nil, id: GraphQLID, title: String? = nil, description: String? = nil, created: String, updated: String, likes: Int) {
-          self.init(unsafeResultMap: ["__typename": "Content", "thumbnail": thumbnail.flatMap { (value: Thumbnail) -> ResultMap in value.resultMap }, "_id": id, "title": title, "description": description, "created": created, "updated": updated, "likes": likes])
+        public init(thumbnail: Thumbnail? = nil, isCol: Bool, id: GraphQLID, title: String? = nil, description: String? = nil, created: String, updated: String, likes: Int) {
+          self.init(unsafeResultMap: ["__typename": "Content", "thumbnail": thumbnail.flatMap { (value: Thumbnail) -> ResultMap in value.resultMap }, "isCol": isCol, "_id": id, "title": title, "description": description, "created": created, "updated": updated, "likes": likes])
         }
 
         public var __typename: String {
@@ -209,6 +210,15 @@ public final class ContentQuery: GraphQLQuery {
           }
           set {
             resultMap.updateValue(newValue?.resultMap, forKey: "thumbnail")
+          }
+        }
+
+        public var isCol: Bool {
+          get {
+            return resultMap["isCol"]! as! Bool
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "isCol")
           }
         }
 

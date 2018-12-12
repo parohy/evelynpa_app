@@ -10,13 +10,13 @@
 import Foundation
 import Apollo
 
-let ContentFetcher = ContentFetcherImpl()
-
-class ContentFetcherImpl {
+class ContentFetcher {
     var apollo: ApolloClient
+    var apolloDataDelegate: ApolloContentDelegate? = nil
     
-    init() {
+    init(delegate: ApolloContentDelegate) {
         apollo = ApolloClient(url: URL(string: "https://us-central1-evelynpa-43e6d.cloudfunctions.net/api/v2/graphql")!)
+        apolloDataDelegate = delegate
     }
     
     /**
@@ -25,7 +25,7 @@ class ContentFetcherImpl {
      - parameter isCol: True if you want to fetch collections
      - parameter delegate: ApolloContentDelegate
      */
-    func loadContent(ref: String, isCol: Bool? = nil, delegate: ApolloContentDelegate? = nil) {
+    func loadContent(ref: String, isCol: Bool? = nil) {
         apollo.fetch(query: ContentQuery(ref: ref, isCol: isCol)) { result, err in
             var resultContent: Content? = nil
             if let err = err {
@@ -34,7 +34,7 @@ class ContentFetcherImpl {
                 resultContent = self.createResultContent(queryData: result?.data)
             }
             
-            delegate?.setData(content: resultContent)
+            self.apolloDataDelegate?.setData(content: resultContent)
         }
     }
     
@@ -62,7 +62,8 @@ class ContentFetcherImpl {
                 for childContent in dataChildren {
                     if let child = childContent {
                         children.append(Content(_ID: child.fragments.mediaFragment.id, title: child.fragments.mediaFragment.title,
-                                                description: child.fragments.mediaFragment.description, created: child.fragments.mediaFragment.created, updated: child.fragments.mediaFragment.updated, likes: child.fragments.mediaFragment.likes, thumbnail: child.thumbnail?.url, children: []))
+                                                description: child.fragments.mediaFragment.description, created: child.fragments.mediaFragment.created, updated: child.fragments.mediaFragment.updated,
+                                                    isCol: child.isCol ,likes: child.fragments.mediaFragment.likes, thumbnail: child.thumbnail?.url, children: []))
                     }
                     
                 }

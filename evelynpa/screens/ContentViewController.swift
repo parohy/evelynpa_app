@@ -8,33 +8,50 @@
 
 import UIKit
 
-class ContentViewController: UIViewController, ApolloContentDelegate {
-    @IBOutlet weak var viewController: UICollectionView!
+class ContentViewController: UIViewController, ContentWithExternalNavigator, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var albumLabel: UILabel!
+    var openCellDelegate: OpenCellDelegate? = nil
+    var albumContent: [Content?] = [Content?]()
+    var externalNavigationProtocol: ExternalNavigationProtocol? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ContentFetcher.loadContent(ref: "UmSePSFyChYbEle6O4hL", delegate: self)
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
     
-    func setData(content: Content?) {
-        print("Set data CONTENT \(content?._ID as String?)")
+    func setDataToView(data: Content) {
+        print("Set data CONTENT \(data._ID as String)")
         
-        //Setting UI data
-        if let dataToSet = content {
-            albumLabel.text = dataToSet.title
+        self.albumContent = data.children.filter {
+            $0.isCol == false
         }
+        self.collectionView.reloadData()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setOpenCellDelegate(openCellDelegate: OpenCellDelegate) {
+        self.openCellDelegate = openCellDelegate
     }
-    */
-
+    
+    func setSender(sender: ExternalNavigationProtocol) {
+        self.externalNavigationProtocol = sender
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.albumContent.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ContentUICell", for: indexPath) as! ContenUICell
+        if let content = self.albumContent[indexPath.row], let delegate = openCellDelegate {
+            cell.updateCellData(content: content, delegate: delegate)
+            return cell
+        }
+        return ContenUICell()
+    }
 }

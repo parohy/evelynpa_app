@@ -5,6 +5,7 @@ query Content($ref: String!, $isCol: Boolean) {
             thumbnail {
                 url
             }
+            isCol
             ...MediaFragment
         }
     }
