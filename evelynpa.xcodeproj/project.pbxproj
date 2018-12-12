@@ -7,21 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A93ECC421BFCDBC00D4B36C /* AlbumUICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93ECC321BFCDBC00D4B36C /* AlbumUICell.swift */; };
+		5A93ECC821BFD2C800D4B36C /* OpenCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93ECC721BFD2C800D4B36C /* OpenCellDelegate.swift */; };
+		5A93ECCC21BFD8A500D4B36C /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93ECCB21BFD8A500D4B36C /* AlbumViewController.swift */; };
+		5A93ECD021BFE2F900D4B36C /* ContentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93ECCF21BFE2F900D4B36C /* ContentViewCell.swift */; };
+		5A93ECD221BFE42700D4B36C /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93ECD121BFE42700D4B36C /* ContentViewController.swift */; };
+		5A93ECD821BFE5FF00D4B36C /* GalleryTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93ECD721BFE5FF00D4B36C /* GalleryTabBarController.swift */; };
+		5A93ECFB21C0078400D4B36C /* ApolloContentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93ECFA21C0078400D4B36C /* ApolloContentDelegate.swift */; };
 		5AB4776721BE814F00F9B519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4776621BE814F00F9B519 /* AppDelegate.swift */; };
-		5AB4776921BE814F00F9B519 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4776821BE814F00F9B519 /* ViewController.swift */; };
 		5AB4776C21BE814F00F9B519 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AB4776A21BE814F00F9B519 /* Main.storyboard */; };
 		5AB4776E21BE815100F9B519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AB4776D21BE815100F9B519 /* Assets.xcassets */; };
 		5AB4777121BE815100F9B519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AB4776F21BE815100F9B519 /* LaunchScreen.storyboard */; };
+		5AB4777A21BE9E3D00F9B519 /* Content.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 5AB4777921BE9E3D00F9B519 /* Content.graphql */; };
+		5AB4777C21BEA00E00F9B519 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4777B21BEA00E00F9B519 /* API.swift */; };
+		5AB4777F21BEA16700F9B519 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4777E21BEA16700F9B519 /* Content.swift */; };
+		5AB4778121BEA1EC00F9B519 /* ContentFetcherImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4778021BEA1EC00F9B519 /* ContentFetcherImpl.swift */; };
+		5AE21A5D21BEBB03008D2CF1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE21A5C21BEBB03008D2CF1 /* HomeViewController.swift */; };
+		5AE21A5F21BEBE1B008D2CF1 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE21A5E21BEBE1B008D2CF1 /* AboutViewController.swift */; };
+		8B05F82E4657E879F20C7375 /* Pods_evelynpa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B336E86DFE90897BD9944CF5 /* Pods_evelynpa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04A5958608D5CB57C4380F77 /* Pods-evelynpa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evelynpa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-evelynpa/Pods-evelynpa.debug.xcconfig"; sourceTree = "<group>"; };
+		5A93ECC321BFCDBC00D4B36C /* AlbumUICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumUICell.swift; sourceTree = "<group>"; };
+		5A93ECC721BFD2C800D4B36C /* OpenCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCellDelegate.swift; sourceTree = "<group>"; };
+		5A93ECCB21BFD8A500D4B36C /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		5A93ECCF21BFE2F900D4B36C /* ContentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewCell.swift; sourceTree = "<group>"; };
+		5A93ECD121BFE42700D4B36C /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		5A93ECD721BFE5FF00D4B36C /* GalleryTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryTabBarController.swift; sourceTree = "<group>"; };
+		5A93ECFA21C0078400D4B36C /* ApolloContentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloContentDelegate.swift; sourceTree = "<group>"; };
 		5AB4776321BE814F00F9B519 /* evelynpa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = evelynpa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AB4776621BE814F00F9B519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5AB4776821BE814F00F9B519 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5AB4776B21BE814F00F9B519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5AB4776D21BE815100F9B519 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AB4777021BE815100F9B519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AB4777221BE815100F9B519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AB4777921BE9E3D00F9B519 /* Content.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Content.graphql; sourceTree = "<group>"; };
+		5AB4777B21BEA00E00F9B519 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		5AB4777E21BEA16700F9B519 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		5AB4778021BEA1EC00F9B519 /* ContentFetcherImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentFetcherImpl.swift; sourceTree = "<group>"; };
+		5AE21A5C21BEBB03008D2CF1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5AE21A5E21BEBE1B008D2CF1 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		70009E9768C2D3140ACD90EF /* Pods-evelynpa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evelynpa.release.xcconfig"; path = "Pods/Target Support Files/Pods-evelynpa/Pods-evelynpa.release.xcconfig"; sourceTree = "<group>"; };
+		B336E86DFE90897BD9944CF5 /* Pods_evelynpa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_evelynpa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +57,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B05F82E4657E879F20C7375 /* Pods_evelynpa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F467E073252ED1C0720D16E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				04A5958608D5CB57C4380F77 /* Pods-evelynpa.debug.xcconfig */,
+				70009E9768C2D3140ACD90EF /* Pods-evelynpa.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5A5C341221C0FBEA00B21F79 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		5A93ECF521C004EB00D4B36C /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5A93ECC721BFD2C800D4B36C /* OpenCellDelegate.swift */,
+				5A93ECFA21C0078400D4B36C /* ApolloContentDelegate.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
 		5AB4775A21BE814F00F9B519 = {
 			isa = PBXGroup;
 			children = (
 				5AB4776521BE814F00F9B519 /* evelynpa */,
 				5AB4776421BE814F00F9B519 /* Products */,
+				1F467E073252ED1C0720D16E /* Pods */,
+				85A17DA9DB7A0C14E95CAFCE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +110,58 @@
 		5AB4776521BE814F00F9B519 /* evelynpa */ = {
 			isa = PBXGroup;
 			children = (
+				5A5C341221C0FBEA00B21F79 /* extensions */,
+				5A93ECF521C004EB00D4B36C /* protocols */,
+				5AE21A5B21BEB988008D2CF1 /* screens */,
+				5AE21A5A21BEB782008D2CF1 /* views */,
+				5AB4777D21BEA15000F9B519 /* models */,
+				5AB4777B21BEA00E00F9B519 /* API.swift */,
 				5AB4776621BE814F00F9B519 /* AppDelegate.swift */,
-				5AB4776821BE814F00F9B519 /* ViewController.swift */,
 				5AB4776A21BE814F00F9B519 /* Main.storyboard */,
 				5AB4776D21BE815100F9B519 /* Assets.xcassets */,
 				5AB4776F21BE815100F9B519 /* LaunchScreen.storyboard */,
 				5AB4777221BE815100F9B519 /* Info.plist */,
+				5AB4778021BEA1EC00F9B519 /* ContentFetcherImpl.swift */,
 			);
 			path = evelynpa;
+			sourceTree = "<group>";
+		};
+		5AB4777D21BEA15000F9B519 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				5AB4777921BE9E3D00F9B519 /* Content.graphql */,
+				5AB4777E21BEA16700F9B519 /* Content.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		5AE21A5A21BEB782008D2CF1 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				5A93ECC321BFCDBC00D4B36C /* AlbumUICell.swift */,
+				5A93ECCF21BFE2F900D4B36C /* ContentViewCell.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		5AE21A5B21BEB988008D2CF1 /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				5AE21A5C21BEBB03008D2CF1 /* HomeViewController.swift */,
+				5AE21A5E21BEBE1B008D2CF1 /* AboutViewController.swift */,
+				5A93ECCB21BFD8A500D4B36C /* AlbumViewController.swift */,
+				5A93ECD121BFE42700D4B36C /* ContentViewController.swift */,
+				5A93ECD721BFE5FF00D4B36C /* GalleryTabBarController.swift */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		85A17DA9DB7A0C14E95CAFCE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B336E86DFE90897BD9944CF5 /* Pods_evelynpa.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5AB4777521BE815100F9B519 /* Build configuration list for PBXNativeTarget "evelynpa" */;
 			buildPhases = (
+				5D242B1D3412DB3F95028276 /* [CP] Check Pods Manifest.lock */,
+				5AB4777821BE829200F9B519 /* Generate Apollo GraphQL API */,
 				5AB4775F21BE814F00F9B519 /* Sources */,
 				5AB4776021BE814F00F9B519 /* Frameworks */,
 				5AB4776121BE814F00F9B519 /* Resources */,
+				6B9357D7B6606E134A1B6FC1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,19 +227,98 @@
 			files = (
 				5AB4777121BE815100F9B519 /* LaunchScreen.storyboard in Resources */,
 				5AB4776E21BE815100F9B519 /* Assets.xcassets in Resources */,
+				5AB4777A21BE9E3D00F9B519 /* Content.graphql in Resources */,
 				5AB4776C21BE814F00F9B519 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5AB4777821BE829200F9B519 /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-cli.sh codegen:generate --queries=\"$(find . -name '*.graphql')\" --schema=schema.json API.swift\n";
+		};
+		5D242B1D3412DB3F95028276 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-evelynpa-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B9357D7B6606E134A1B6FC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-evelynpa/Pods-evelynpa-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Apollo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-evelynpa/Pods-evelynpa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5AB4775F21BE814F00F9B519 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AB4776921BE814F00F9B519 /* ViewController.swift in Sources */,
+				5A93ECC821BFD2C800D4B36C /* OpenCellDelegate.swift in Sources */,
+				5AB4778121BEA1EC00F9B519 /* ContentFetcherImpl.swift in Sources */,
+				5AB4777C21BEA00E00F9B519 /* API.swift in Sources */,
+				5A93ECD221BFE42700D4B36C /* ContentViewController.swift in Sources */,
+				5A93ECCC21BFD8A500D4B36C /* AlbumViewController.swift in Sources */,
+				5AE21A5F21BEBE1B008D2CF1 /* AboutViewController.swift in Sources */,
+				5A93ECFB21C0078400D4B36C /* ApolloContentDelegate.swift in Sources */,
+				5A93ECC421BFCDBC00D4B36C /* AlbumUICell.swift in Sources */,
 				5AB4776721BE814F00F9B519 /* AppDelegate.swift in Sources */,
+				5A93ECD021BFE2F900D4B36C /* ContentViewCell.swift in Sources */,
+				5AB4777F21BEA16700F9B519 /* Content.swift in Sources */,
+				5AE21A5D21BEBB03008D2CF1 /* HomeViewController.swift in Sources */,
+				5A93ECD821BFE5FF00D4B36C /* GalleryTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +462,7 @@
 		};
 		5AB4777621BE815100F9B519 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04A5958608D5CB57C4380F77 /* Pods-evelynpa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +481,7 @@
 		};
 		5AB4777721BE815100F9B519 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70009E9768C2D3140ACD90EF /* Pods-evelynpa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

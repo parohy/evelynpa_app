@@ -1,0 +1,20 @@
+query Content($ref: String!, $isCol: Boolean) {
+    content(ref: $ref) {
+        ...MediaFragment
+        children(isCol: $isCol) {
+            thumbnail {
+                url
+            }
+            ...MediaFragment
+        }
+    }
+}
+
+fragment MediaFragment on Content {
+    _id
+    title
+    description
+    created
+    updated
+    likes
+}

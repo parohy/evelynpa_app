@@ -1,0 +1,6 @@
+framework module Pods_evelynpa {
+  umbrella header "Pods-evelynpa-umbrella.h"
+
+  export *
+  module * { export * }
+}

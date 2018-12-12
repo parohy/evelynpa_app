@@ -1,0 +1,24 @@
+PODS:
+  - Apollo (0.9.4):
+    - Apollo/Core (= 0.9.4)
+  - Apollo/Core (0.9.4)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+
+DEPENDENCIES:
+  - Apollo
+  - SDWebImage
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Apollo
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  Apollo: 450856adbdebcdf28c3c671f81732ac3f9944065
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+
+PODFILE CHECKSUM: 70a58a7209459575638659207017ced9ca02d931
+
+COCOAPODS: 1.5.3
