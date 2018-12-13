@@ -12,4 +12,8 @@ extension ExternalNavigatorObserver {
     func onRefreshEnd() {
         
     }
+    
+    func hideBackButton(hide: Bool) {
+        
+    }
 }

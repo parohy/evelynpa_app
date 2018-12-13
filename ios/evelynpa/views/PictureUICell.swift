@@ -8,10 +8,16 @@
 
 import UIKit
 
-class ContenUICell: UICollectionViewCell {
+class PictureUICell: UICollectionViewCell {
     @IBOutlet weak var contentImage: UIImageView!
     var cellContent: Content? = nil
     var delegate: OpenCellDelegate? = nil
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.layer.borderWidth = 0.7
+        self.layer.borderColor = UIColor(rgb: 0x4b052e).cgColor
+    }
     
     
     func updateCellData(content: Content, delegate: OpenCellDelegate) {

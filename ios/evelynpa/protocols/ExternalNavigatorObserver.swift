@@ -12,4 +12,5 @@ protocol ExternalNavigatorObserver {
     var externalNavigationProtocol: ExternalNavigationProtocol? {get}
     func setSender(sender: ExternalNavigationProtocol)
     func onRefreshEnd()
+    func hideBackButton(_ hide: Bool)
 }

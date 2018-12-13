@@ -13,6 +13,7 @@ class AlbumViewController: UIViewController, ContentWithExternalNavigator, UICol
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var albumLabel: UILabel!
+    @IBOutlet weak var backButton: UIButton!
     var albumContent: [Content?] = [Content?]()
     var openCellDelegate: OpenCellDelegate? = nil
     var externalNavigationProtocol: ExternalNavigationProtocol? = nil
@@ -33,6 +34,8 @@ class AlbumViewController: UIViewController, ContentWithExternalNavigator, UICol
         } else {
             collectionView.addSubview(refreshControl)
         }
+        
+        backButton.isHidden = true
     }
     
     func setOpenCellDelegate(openCellDelegate: OpenCellDelegate) {
@@ -55,19 +58,28 @@ class AlbumViewController: UIViewController, ContentWithExternalNavigator, UICol
         }
 
         //Setting UI data
-        albumLabel.text = data.title
+        if let title = data.title {
+            albumLabel.text = title
+        } else {
+           albumLabel.text = "Gallery"
+        }
+        
         self.collectionView.reloadData()
     }
     
     @IBAction func onBackTap(_ sender: Any) {
         guard externalNavigationProtocol?.back() == false else {
-            self.performSegue(withIdentifier: "unwindFromScreen", sender: self)
+//            self.performSegue(withIdentifier: "unwindFromScreen", sender: self)
             return
         }
     }
     
     @objc func refresh(_ sender: UIRefreshControl) {
         self.externalNavigationProtocol?.onRefresh()
+    }
+    
+    func hideBackButton(_ hide: Bool) {
+        backButton.isHidden = hide
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

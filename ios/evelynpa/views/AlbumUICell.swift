@@ -10,11 +10,20 @@ import UIKit
 
 class AlbumUICell: UICollectionViewCell {
     @IBOutlet weak var albumImage: UIImageView!
+    @IBOutlet weak var albumLabelContainer: UIView!
     @IBOutlet weak var albumLabel: UILabel!
     
     var cellContent: Content? = nil
     var delegate: OpenCellDelegate? = nil
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.setGradientBG()
+        
+        self.layer.borderWidth = 0.7
+        self.layer.borderColor = UIColor(rgb: 0x4b052e).cgColor
+    }
+
     func updateCellData(content: Content, delegate: OpenCellDelegate) {
         self.cellContent = content
         self.delegate = delegate
@@ -23,6 +32,11 @@ class AlbumUICell: UICollectionViewCell {
         if let url = content.thumbnail {
             albumImage.sd_setImage(with: URL(string: url), completed: nil)
         }
+    }
+    
+    private func setGradientBG() {
+        let colors = [UIColor(rgb: 0xffffff, a: CGFloat(0.0)).cgColor, UIColor(rgb: 0xffffff).cgColor]
+        albumLabelContainer.addGradientToView(colors: colors)
     }
     
     @IBAction func openCell(_ sender: Any) {

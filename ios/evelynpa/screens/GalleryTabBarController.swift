@@ -4,12 +4,6 @@
 //
 //  Created by Tomas Paronai on 12/11/18.
 //  Copyright © 2018 Tomas Paronai. All rights reserved.
-/*
- Albums icon:
- <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/"                 title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"                 title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
- Galerry icon:
- <div>Icons made by <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/"                 title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"                 title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-*/
 import UIKit
 
 class GalleryTabBarController: UITabBarController, ApolloContentDelegate, OpenCellDelegate, ExternalNavigationProtocol {
@@ -37,6 +31,7 @@ class GalleryTabBarController: UITabBarController, ApolloContentDelegate, OpenCe
         if let controllers = viewControllers, let data = content {
             for case let viewDelegate as ContentWithExternalNavigator in controllers {
                 viewDelegate.setDataToView(data: data)
+                viewDelegate.hideBackButton(self.currentReference.count == 1)
                 viewDelegate.onRefreshEnd()
             }
         }
