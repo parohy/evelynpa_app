@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A3373A221C794680060F1E0 /* CellDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3373A121C794680060F1E0 /* CellDataDelegate.swift */; };
 		5A52AF0821C25EF300692468 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A52AF0721C25EF300692468 /* UIViewExtension.swift */; };
 		5A5C341621C1091600B21F79 /* ContentDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C341521C1091600B21F79 /* ContentDataProtocol.swift */; };
 		5A5C341A21C133C200B21F79 /* ExternalNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C341921C133C200B21F79 /* ExternalNavigationProtocol.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		04A5958608D5CB57C4380F77 /* Pods-evelynpa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-evelynpa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-evelynpa/Pods-evelynpa.debug.xcconfig"; sourceTree = "<group>"; };
+		5A3373A121C794680060F1E0 /* CellDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDataDelegate.swift; sourceTree = "<group>"; };
 		5A52AF0721C25EF300692468 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		5A5C341521C1091600B21F79 /* ContentDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDataProtocol.swift; sourceTree = "<group>"; };
 		5A5C341921C133C200B21F79 /* ExternalNavigationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalNavigationProtocol.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				5A5C341921C133C200B21F79 /* ExternalNavigationProtocol.swift */,
 				5A5C341B21C1359A00B21F79 /* ExternalNavigatorObserver.swift */,
 				5A5C341D21C136A500B21F79 /* ContentWithExternalNavigator.swift */,
+				5A3373A121C794680060F1E0 /* CellDataDelegate.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				5AB4777C21BEA00E00F9B519 /* API.swift in Sources */,
 				5A5C342221C1524300B21F79 /* UIColorExtension.swift in Sources */,
 				5A93ECD221BFE42700D4B36C /* ContentViewController.swift in Sources */,
+				5A3373A221C794680060F1E0 /* CellDataDelegate.swift in Sources */,
 				5A93ECCC21BFD8A500D4B36C /* AlbumViewController.swift in Sources */,
 				5AE21A5F21BEBE1B008D2CF1 /* AboutViewController.swift in Sources */,
 				5A5C341A21C133C200B21F79 /* ExternalNavigationProtocol.swift in Sources */,

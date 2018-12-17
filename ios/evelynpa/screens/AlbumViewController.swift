@@ -11,9 +11,10 @@ import SDWebImage
 
 class AlbumViewController: UIViewController, ContentWithExternalNavigator, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var albumLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var albumContent: [Content?] = [Content?]()
     var openCellDelegate: OpenCellDelegate? = nil
     var externalNavigationProtocol: ExternalNavigationProtocol? = nil
@@ -35,7 +36,9 @@ class AlbumViewController: UIViewController, ContentWithExternalNavigator, UICol
             collectionView.addSubview(refreshControl)
         }
         
-        backButton.isHidden = true
+        self.navigationBar.topItem?.title = "Gallery"
+        self.navigationBar.shadowImage = UIImage()
+        self.backButton.isHidden = true
     }
     
     func setOpenCellDelegate(openCellDelegate: OpenCellDelegate) {
@@ -59,12 +62,15 @@ class AlbumViewController: UIViewController, ContentWithExternalNavigator, UICol
 
         //Setting UI data
         if let title = data.title {
-            albumLabel.text = title
+            self.navigationBar.topItem?.title = title
         } else {
-           albumLabel.text = "Gallery"
+           self.navigationBar.topItem?.title = "Gallery"
         }
         
-        self.collectionView.reloadData()
+        self.collectionView.performBatchUpdates({
+            self.collectionView.reloadSections(IndexSet(integer: 0))
+        })
+        
     }
     
     @IBAction func onBackTap(_ sender: Any) {
@@ -79,7 +85,7 @@ class AlbumViewController: UIViewController, ContentWithExternalNavigator, UICol
     }
     
     func hideBackButton(_ hide: Bool) {
-        backButton.isHidden = hide
+        self.backButton.isHidden = hide
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -92,8 +98,8 @@ class AlbumViewController: UIViewController, ContentWithExternalNavigator, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AlbumUICell", for: indexPath) as! AlbumUICell
-        if let content = self.albumContent[indexPath.row], let delegate = openCellDelegate {
-            cell.updateCellData(content: content, delegate: delegate)
+        if let content = self.albumContent[indexPath.row], let delegate = openCellDelegate, let cellDelegate = cell as? CellDataDelegate {
+            cellDelegate.updateCellData(content: content, delegate: delegate)
             return cell
         }
         return AlbumUICell()

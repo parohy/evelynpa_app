@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlbumUICell: UICollectionViewCell {
+class AlbumUICell: UICollectionViewCell, CellDataDelegate {
     @IBOutlet weak var albumImage: UIImageView!
     @IBOutlet weak var albumLabelContainer: UIView!
     @IBOutlet weak var albumLabel: UILabel!
@@ -20,6 +20,7 @@ class AlbumUICell: UICollectionViewCell {
         super.awakeFromNib()
         self.setGradientBG()
         
+        //border
         self.layer.borderWidth = 0.7
         self.layer.borderColor = UIColor(rgb: 0x4b052e).cgColor
     }
@@ -34,6 +35,7 @@ class AlbumUICell: UICollectionViewCell {
         }
     }
     
+    //set gradient color for label container
     private func setGradientBG() {
         let colors = [UIColor(rgb: 0xffffff, a: CGFloat(0.0)).cgColor, UIColor(rgb: 0xffffff).cgColor]
         albumLabelContainer.addGradientToView(colors: colors)

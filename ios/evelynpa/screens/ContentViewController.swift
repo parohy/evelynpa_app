@@ -9,9 +9,9 @@
 import UIKit
 
 class ContentViewController: UIViewController, ContentWithExternalNavigator, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var albumLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet weak var collectionView: UICollectionView!
     var openCellDelegate: OpenCellDelegate? = nil
     var albumContent: [Content?] = [Content?]()
     var externalNavigationProtocol: ExternalNavigationProtocol? = nil
@@ -32,6 +32,10 @@ class ContentViewController: UIViewController, ContentWithExternalNavigator, UIC
         } else {
             collectionView.addSubview(refreshControl)
         }
+        
+        self.navigationBar.topItem?.title = "Gallery"
+        self.navigationBar.shadowImage = UIImage()
+        self.backButton.isHidden = true
     }
     
     @objc func refresh(_ sender: UIRefreshControl) {
@@ -43,7 +47,7 @@ class ContentViewController: UIViewController, ContentWithExternalNavigator, UIC
     }
     
     func hideBackButton(_ hide: Bool) {
-        backButton.isHidden = hide
+        self.backButton.isHidden = hide
     }
     
     func setDataToView(data: Content) {
@@ -53,13 +57,16 @@ class ContentViewController: UIViewController, ContentWithExternalNavigator, UIC
             $0.isCol == false
         }
         
+        //Setting UI data
         if let title = data.title {
-            albumLabel.text = title
+            self.navigationBar.topItem?.title = title
         } else {
-            albumLabel.text = "Gallery"
+            self.navigationBar.topItem?.title = "Gallery"
         }
         
-        self.collectionView.reloadData()
+        self.collectionView.performBatchUpdates({
+            self.collectionView.reloadSections(IndexSet(integer: 0))
+        })
     }
     
     func setOpenCellDelegate(openCellDelegate: OpenCellDelegate) {
@@ -86,8 +93,8 @@ class ContentViewController: UIViewController, ContentWithExternalNavigator, UIC
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ContentUICell", for: indexPath) as! PictureUICell
-        if let content = self.albumContent[indexPath.row], let delegate = openCellDelegate {
-            cell.updateCellData(content: content, delegate: delegate)
+        if let content = self.albumContent[indexPath.row], let delegate = openCellDelegate, let cellDelegate = cell as? CellDataDelegate {
+            cellDelegate.updateCellData(content: content, delegate: delegate)
             return cell
         }
         return PictureUICell()
